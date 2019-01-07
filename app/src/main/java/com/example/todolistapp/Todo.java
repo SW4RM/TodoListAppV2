@@ -3,6 +3,8 @@ package com.example.todolistapp;
 import java.util.Date;
 import java.util.UUID;
 
+// Todo is declaring the classes that will be utilised by the fragments.
+
 public class Todo {
 
     private UUID mId;

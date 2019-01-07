@@ -16,7 +16,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 
 import java.util.UUID;
-
+//TodoFragmnet is responsible for creating the fragments to be used in the activity.
 public class TodoFragment extends Fragment {
 
     private static final String ARG_TODO_ID = "todo_id";

@@ -13,9 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * Created by Ebbi on 26/11/2017.
- */
+// this class gives us the ability to swipe between the diffrent detail pages of each of the current to-dos
 
 public class TodoPagerActivity extends AppCompatActivity {
 

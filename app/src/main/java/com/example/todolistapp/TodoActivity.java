@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import java.util.UUID;
+//TodoActiviy is the fragment manger responsible for all the fragments being ustilised in the activity.
 
 public class TodoActivity extends AppCompatActivity {
 

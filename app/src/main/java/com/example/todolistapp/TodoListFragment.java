@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+//this class creates the fragments for the TodoList activity
 
 public class TodoListFragment extends Fragment {
 

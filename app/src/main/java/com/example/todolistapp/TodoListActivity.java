@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-
+//another fragment manager but is responsilbe for adding the fragment into the TodoList Activity.
 public class TodoListActivity extends AppCompatActivity {
 
     @Override
