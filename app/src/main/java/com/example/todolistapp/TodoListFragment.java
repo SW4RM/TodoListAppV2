@@ -100,6 +100,9 @@ public class TodoListFragment extends Fragment {
         private Todo mTodo;
         private TextView mTextViewTitle;
         private TextView mTextViewDate;
+        private TextView mTextViewStat;
+
+
 
         public TodoHolder(LayoutInflater inflater, ViewGroup parent) {
 
@@ -109,7 +112,7 @@ public class TodoListFragment extends Fragment {
 
             mTextViewTitle = (TextView) itemView.findViewById(R.id.todo_title);
             mTextViewDate = (TextView) itemView.findViewById(R.id.todo_date);
-
+            mTextViewStat = (TextView) itemView.findViewById(R.id.todo_stat);
         }
 
         @Override
@@ -132,6 +135,8 @@ public class TodoListFragment extends Fragment {
             mTodo = todo;
             mTextViewTitle.setText(mTodo.getTitle());
             mTextViewDate.setText(mTodo.getDate().toString());
+           mTextViewStat.setText((mTodo.Complete()));
+
         }
 
     }

@@ -25,6 +25,8 @@ public class TodoFragment extends Fragment {
     private EditText mEditTextTitle;
     private Button mButtonDate;
     private CheckBox mCheckBoxIsComplete;
+    private EditText mEditTextDetail;
+
 
     /*
     Rather than the calling the constructor directly, Activity(s) should call newInstance
@@ -94,16 +96,45 @@ public class TodoFragment extends Fragment {
             }
         });
 
+        mEditTextDetail = (EditText) view.findViewById(R.id.todo_detail);
+        mEditTextDetail.setText(mTodo.getDetail());
+        mEditTextDetail.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // This line is intentionally left blank
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mTodo.setDetail(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                // This line is intentionally left blank
+            }
+        });
+
         mButtonDate = (Button) view.findViewById(R.id.todo_date);
         mButtonDate.setText(mTodo.getDate().toString());
         mButtonDate.setEnabled(false);
 
         mCheckBoxIsComplete = (CheckBox) view.findViewById(R.id.todo_complete);
+        if (mTodo.Complete() == "Complete") {
+            mCheckBoxIsComplete.setChecked(true);
+        } else {
+            mCheckBoxIsComplete.setChecked(false);
+        }
         mCheckBoxIsComplete.setOnCheckedChangeListener(new OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Log.d("DEBUG **** TodoFragment","called onCheckedChanged");
                 mTodo.setComplete(isChecked);
+               if (isChecked = true) {
+                    mTodo.GetCompleted("Complete");
+               } else if (isChecked = false) {
+                   mTodo.GetCompleted("Incomplete");
+               }
             }
         });
 

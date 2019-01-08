@@ -12,6 +12,7 @@ public class Todo {
     private String mDetail;
     private Date mDate;
     private boolean mIsComplete;
+    private String mCompleted;
 
     public Todo() {
         mId = UUID.randomUUID();
@@ -58,5 +59,11 @@ public class Todo {
         mIsComplete = complete;
     }
 
+    public String Complete() {
+        return mCompleted;
+    }
+
+    public void GetCompleted(String Completed) {
+        mCompleted = "Complete";}
 
 }
